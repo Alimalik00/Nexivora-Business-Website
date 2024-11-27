@@ -1,0 +1,118 @@
+/* Header.css */
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
+    background: rgba(0, 0, 0, 0.251); /* Semi-transparent black */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    height: 70px;
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.8); /* Darker background on scroll */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.logo img {
+    height: 18px; /* Adjust size based on your logo */
+    margin-right: 8px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    font-weight: bolder;
+    color: #00ff48; /* Highlight color for active/hovered links */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Strategy Call Button */
+.strategy-call-btn {
+    background-color: #28a745; /* Green background */
+    color: #fff;
+    padding: 28px 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: -2px;
+    margin-right: -40px;
+    font-size: medium;
+}
+
+.strategy-call-btn:hover {
+    background: linear-gradient(to bottom, #0d4d21, #218838); /* Darker green on hover */
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        width: 200px;
+        border-radius: 8px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .logo img {
+        height: 14px;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+
+    .strategy-call-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

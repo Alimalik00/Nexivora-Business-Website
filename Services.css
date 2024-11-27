@@ -1,0 +1,114 @@
+/* General Styles for the Section */
+.services-section {
+  padding: 50px;
+  text-align: center;
+  background: linear-gradient(to top, #0d4d21, #218838);
+  
+}
+
+.services-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.services-section p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.primary-btn {
+  background-color: #fff;
+    color: #000000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 90px;
+}
+
+.primary-btn:hover {
+  background-color: #218838;
+}
+
+/* Services Container */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+/* Individual Service Cards */
+.service-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 12px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(to bottom, #68d78b, #3fe46399);
+  
+}
+
+.service-card img.service-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.service-card:hover h3 {
+  font-size: 1.25rem;
+  color: #000000;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+
+.service-card:hover p {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .service-card {
+    width: 90%; /* Adjust card width for smaller screens */
+  }
+}

@@ -1,0 +1,137 @@
+/* General Reset and Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 91vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -68px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 300px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.primary-btn,
+.secondary-btn {
+  font-size: 1.1rem;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: transparent;
+  border: 2px solid #28a745;
+  color: #28a745;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  background-color: #218838;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Enterprises Section */
+.enterprises {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.enterprises-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 90px;
+  margin-bottom: 50px;
+}
+
+.enterprises-logos img {
+  height: 60px;
+  animation: moveImages 35s ease-in-out infinite;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #218838;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .enterprises-logos img {
+    height: 70px;
+  }
+}
